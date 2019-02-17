@@ -8,7 +8,7 @@ class Mortgage
 		float rate;
 		int years;
 	public:
-		Mortage();
+		Mortgage();
 		void setLoan(float);
 		void setRate(float);
 		void setYears(int);

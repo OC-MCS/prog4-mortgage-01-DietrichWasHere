@@ -2,7 +2,11 @@
 #include "Mortgage.h"
 
 // initialize values on creation
-Mortgage
+Mortgage::Mortgage()
+{
+	loan = 0.0;
+
+}
 
 // set total loan value to nLoan
 void Mortgage::setLoan(float nLoan)
