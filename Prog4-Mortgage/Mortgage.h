@@ -4,14 +4,14 @@
 class Mortgage
 {
 	private:
-		float loan;
-		float rate;
-		int years;
+		float loan; // total loan under mortgage
+		float rate; // rate of interest
+		int years; // years mortgage lasts
 	public:
 		Mortgage();
 		void setLoan(float);
 		void setRate(float);
 		void setYears(int);
 		float getMonthlyPayment();
-		float getTotalMortagePayment();
+		float getTotalPayment();
 };

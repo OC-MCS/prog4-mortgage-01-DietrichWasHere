@@ -1,3 +1,13 @@
+//=====================================================
+// Dietrich Versaw
+// 2/20/19
+// Programming 2 Assignment #4
+// Description: Mortgage
+//=====================================================
 
-// main goes here. Code that *uses* the Mortgage class
-// goes in this file
+#include <iostream>
+#include <iomanip>
+#include "Mortgage.h"
+
+using namespace std;
+
