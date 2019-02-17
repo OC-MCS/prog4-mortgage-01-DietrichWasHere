@@ -22,28 +22,42 @@ int main()
 	bool check = false; // used to ensure useable input 
 	float holdF = 0; // holds input float;
 	int holdI = 0; // holds input int
+	cout << "Loan: $";
+	cin >> input;
+	check = parseFloat(input, holdF);
 	while (!check)
 	{
+		cout << "Not valid loan amount!" << endl;
 		cout << "Loan: $";
 		cin >> input;
 		check = parseFloat(input, holdF);
 	}
 	userMort.setLoan(holdF);
 	check = false;
+	cout << "Rate: %";
+	cin >> input;
+	check = parseFloat(input, holdF);
 	while (!check)
 	{
+		cout << "Not valid interest rate!" << endl;
 		cout << "Rate: %";
 		cin >> input;
 		check = parseFloat(input, holdF);
 	}
 	userMort.setRate(holdF);
 	check = false;
+	cout << "Years: ";
+	cin >> input;
+	check = parseInt(input, holdI);
 	while (!check)
 	{
-		cout << "Loan: $";
+		cout << "Not valid number of years!" << endl;
+		cout << "Years: ";
 		cin >> input;
 		check = parseInt(input, holdI);
 	}
+	cout << left << setw(20) << "Monthly Payment:" << "$" << setprecision(2) << showpoint << fixed << userMort.getMonthlyPayment() << endl;
+	cout << setw(20) << "Total Payment:" << "$" << setprecision(2) << showpoint << fixed << userMort.getTotalPayment() << endl;
 }
 
 // copy-paste from example file
