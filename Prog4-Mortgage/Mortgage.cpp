@@ -1,7 +1,6 @@
 // implementation file for Mortgage class
 #include "Mortgage.h"
 #include <cmath>
-#include <iostream>
 using namespace std;
 
 // initialize values on creation
@@ -21,7 +20,7 @@ void Mortgage::setLoan(float nLoan)
 // set rate value to nRate
 void Mortgage::setRate(float nRate)
 {
-	rate = nRate;
+	rate = nRate / 100;
 }
 
 // set year value to nYear
@@ -39,7 +38,6 @@ float Mortgage::getMonthlyPayment()
 	// payment holds return value
 	term = pow((1 + (rate / 12)), 12 * years);
 	payment = (loan * (rate / 12) * term) / (term - 1);
-	cout << payment;
 	return payment;
 }
 
@@ -52,6 +50,5 @@ float Mortgage::getTotalPayment()
 	// payment holds return value
 	term = pow((1 + (rate / 12)), 12 * years);
 	payment = ((loan * (rate / 12) * term) / (term - 1)) * 12 * years;
-	cout << payment;
 	return payment;
 }

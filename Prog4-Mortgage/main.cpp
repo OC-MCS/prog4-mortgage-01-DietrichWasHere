@@ -56,6 +56,7 @@ int main()
 		cin >> input;
 		check = parseInt(input, holdI);
 	}
+	userMort.setYears(holdI);
 	cout << left << setw(20) << "Monthly Payment:" << "$" << setprecision(2) << showpoint << fixed << userMort.getMonthlyPayment() << endl;
 	cout << setw(20) << "Total Payment:" << "$" << setprecision(2) << showpoint << fixed << userMort.getTotalPayment() << endl;
 }
