@@ -1,20 +1,23 @@
 // implementation file for Mortgage class
 #include "Mortgage.h"
 
+// initialize values on creation
+Mortgage
+
 // set total loan value to nLoan
-void Mortage::setLoan(float nLoan)
+void Mortgage::setLoan(float nLoan)
 {
 	loan = nLoan;
 }
 
 // set rate value to nRate
-void Mortage::setRate(float nRate)
+void Mortgage::setRate(float nRate)
 {
 	rate = nRate;
 }
 
 // set year value to nYear
-void Mortage::setYears(int nYear)
+void Mortgage::setYears(int nYear)
 {
 	years = nYear;
 }

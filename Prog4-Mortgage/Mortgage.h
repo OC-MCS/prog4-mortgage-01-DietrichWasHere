@@ -1,7 +1,7 @@
 #pragma once
 // header file for Mortgage class
 // hold info, functions for mortgage calculations
-class Mortage
+class Mortgage
 {
 	private:
 		float loan;
