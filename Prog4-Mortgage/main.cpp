@@ -8,6 +8,89 @@
 #include <iostream>
 #include <iomanip>
 #include "Mortgage.h"
+#include <string>
 
 using namespace std;
+bool parseInt(string sval, int& val);
+bool parseFloat(string sval, float& val);
 
+// calc and display mortgage cost, monthly and total
+int main()
+{
+	Mortgage userMort; // stores mortgage values input by user
+	string input; // hold user input for conversion to number
+	bool check = false; // used to ensure useable input 
+	float holdF = 0; // holds input float;
+	int holdI = 0; // holds input int
+	while (!check)
+	{
+		cout << "Loan: $";
+		cin >> input;
+		check = parseFloat(input, holdF);
+	}
+	userMort.setLoan(holdF);
+	check = false;
+	while (!check)
+	{
+		cout << "Rate: %";
+		cin >> input;
+		check = parseFloat(input, holdF);
+	}
+	userMort.setRate(holdF);
+	check = false;
+	while (!check)
+	{
+		cout << "Loan: $";
+		cin >> input;
+		check = parseInt(input, holdI);
+	}
+}
+
+// copy-paste from example file
+// attempts to convert string to int, return via ref
+// recieves string, int to put string into
+// returns int via ref, bool to tell whether or not successful
+// tests to see if value is above zero
+bool parseInt(string sval, int& val)
+{
+	int num; // store temp val
+	bool success = true; // return val, if num is usable
+	try
+	{
+		num = stoi(sval);   // or use stof for string-to-float
+		if (num > 0)
+		{
+			val = num;
+		}
+		else success = false;
+	}
+	catch (const std::exception&)
+	{
+		success = false;
+	}
+	return success;
+}
+
+// attempts to convert string to float, return via ref
+// recieves string, float to put string into
+// returns float via ref, bool to tell whether or not successful
+// tests to see if value is above zero
+bool parseFloat(string sval, float& val)
+{
+	float num; // store temp val
+	bool success = true; // return val, if num is usable
+	try
+	{
+		num = stof(sval);   // or use stof for string-to-float
+		if (num > 0)
+		{
+			val = num;
+		}
+		else success = false;
+	}
+	catch (const std::exception&)
+	{
+		success = false;
+	}
+	return success;
+}
