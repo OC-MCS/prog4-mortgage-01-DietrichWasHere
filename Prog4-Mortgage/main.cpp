@@ -12,7 +12,7 @@
 
 using namespace std;
 bool parseInt(string sval, int& val);
-bool parseFloat(string sval, float& val);
+bool parseFloat(string sval, float& val); 
 
 // calc and display mortgage cost, monthly and total
 int main()
